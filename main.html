@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CIS Sustainability Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<h1>JavaScript Main</h1>
+<!--
+<div id="output">
+    <h2 id="daily-output"></h2>
+    <h2 id="monthly-output"></h2>
+    <h2 id="accumulated-output"></h2>
+</div>
+<script src="index.js"></script>
+-->
+
+
+<!-- <div id="daily-output"></div>
+ <script src="index.js" ></script>-->
+<script src="scrape/monthlyScrape.js"></script>
+<script src="scrape/dailyScrape.js"></script>
+
+<!--<script src="scrape/monthlyScrape.js"></script>
+<script src="scrape/accumulatedScrape.js"></script>-->
+
+<p id="daily-output">{{dailyOutput}}</p>
+<p id="monthly-output">{{monthlyOutput}}</p>
+<!--<p id="accumulated-output">{{accumulatedOutput}}</p>-->
+<div id="accumulated-output"></div>
+
+
+<button id="reset-button">Reset</button>
+<script src="reset.js"></script>
+<script>
+    const button = document.getElementById("reset-button");
+    button.addEventListener("click", resetButton);
+</script>
+
+<!-- Clock -->
+<div id="clock-rectangle"></div>
+<div id="clock"></div>
+<script src="clock.js" ></script>
+
+<!-- CIS Image -->
+<img src="CIS%20Logo.png" alt="CIS Logo" style="position: absolute; left: -200px; top: -40px; transform: scale(0.5);">
+
+<!-- Panel 1 -->
+<div id="panel1"></div>
+<hr id = "panel1Line">
+<div class="tooltip" id="tooltip-1">
+    <span class="tooltip-text">Tooltip 1 text</span>
+    <span class="tooltip-content">Daily Energy Output</span>
+</div>
+
+<!-- Panel 2 -->
+<div id="panel2"></div>
+<hr id = "panel2Line">
+<div class="tooltip" id="tooltip-2">
+    <span class="tooltip-text">Tooltip 2 text</span>
+    <span class="tooltip-content">Monthly Energy Output</span>
+</div>
+
+<!-- Panel 3 -->
+<div id="panel3"></div>
+<hr id = "panel3Line">
+<div class="tooltip" id="tooltip-3">
+    <span class="tooltip-text">Tooltip 3 text</span>
+    <span class="tooltip-content">Accumulated Energy Output</span>
+</div>
+
+<!-- Panel 4 -->
+<div id="panel4"></div>
+<hr id = "panel4Line">
+<div class="tooltip" id="tooltip-4">
+    <span class="tooltip-text">Tooltip 4 text</span>
+    <span class="tooltip-content">Energy Progression Graph</span>
+</div>
+
+<canvas id="energyProgression"></canvas>
+
+<div id="modal">
+    <canvas id="largeEnergyProgression" width="550" height="400"></canvas>
+    <button id="close-button"> Close </button>
+</div>
+<button id="enlarge-button">Enlarge</button>
+<script src="energyProgressionGraph.js"></script>
+
+
+<!-- Battery -->
+<div id="battery"></div>
+<select id="dropdown-battery">
+    <option value="2024 Jul to Dec">2024 - Jul to Dec</option>
+    <option value="2024 Jan to Jun">2024 - Jan to Jun</option>
+    <option value="2023 Jul to Dec">2023 - Jul to Dec</option>
+    <option value="2023 Jan to Jun">2023 - Jan to Jun</option>
+    <option value="2022 Jul to Dec">2022 - Jul to Dec</option>
+    <option value="2022 Jan to Jun">2022 - Jan to Jun</option>
+</select>
+
+<div id="diagram-container">
+    <canvas id="diagram-canvas"></canvas>
+</div>
+<script src="batteryDiagram.js"></script>
+<div class="tooltip" id="tooltip-battery">
+    <span class="tooltip-text">Tooltip 4 text</span>
+    <span class="tooltip-content">Chart displaying clean/unclean <br> energy proportion (%)</span>
+</div>
+</body>
+</html>

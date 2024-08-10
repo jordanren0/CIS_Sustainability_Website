@@ -1,0 +1,21 @@
+{
+  "name": "cis_sustainability_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scrape/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.3",
+    "ejs": "^3.1.10",
+    "handlebars": "^4.7.8",
+    "jsdom": "^24.1.1",
+    "open": "^10.1.0",
+    "puppeteer": "^22.15.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-user-preferences": "^2.4.1"
+  }
+}

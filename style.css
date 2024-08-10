@@ -1,0 +1,346 @@
+body {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+h1 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tooltip {
+    position: absolute;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    white-space: wrap;
+    width: 200px;
+    background-color: white;
+    color: black;
+    top: 120%;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    border: 2px solid black;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltip-content{
+    cursor: help;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+#daily-output {
+    font-size: 60px;
+    color: #00FFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    white-space: nowrap;
+    transform: scale(0.5);
+}
+
+#monthly-output {
+    font-size: 60px;
+    color: #00FFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    white-space: nowrap;
+    transform: scale(0.5);
+}
+
+#accumulated-output {
+    font-size: 60px;
+    color: #00FFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 70px;
+    left: 500px;
+    white-space: nowrap;
+    transform: scale(0.5);
+}
+
+#clock {
+    font-size: 60px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 925px;
+    top: 65px;
+    white-space: nowrap;
+    transform: scale(0.5);
+}
+
+#CIS_Logo{
+    transform: scaleX(1000);
+}
+
+#clock-rectangle{
+    width:400px;
+    height:100px;
+    border-radius:20px;
+    background:#642834;
+    position: absolute;
+    left: 1000px;
+    top: 50px;
+}
+
+#panel1{
+    width:420px;
+    height:250px;
+    background:#ffffff;
+    border-radius:20px;
+    position: absolute;
+    left: 500px;
+    top: 200px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+#panel1Line{
+    width: 425px;
+    background: black;
+    border: none;
+    height: 3px;
+    position: absolute;
+    left: 500px;
+    top: 240px;
+}
+
+#tooltip-1 {
+    left: 595px;
+    top: 213px;
+}
+
+#panel2{
+    width:420px;
+    height:250px;
+    background:#ffffff;
+    border-radius:20px;
+    position: absolute;
+    left: 970px;
+    top: 200px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+#panel2Line{
+    width: 425px;
+    background: black;
+    border: none;
+    height: 3px;
+    position: absolute;
+    left: 970px;
+    top: 240px;
+}
+
+#tooltip-2 {
+    left: 1045px;
+    top: 213px;
+}
+
+#panel3{
+    width:420px;
+    height:250px;
+    background:#ffffff;
+    border-radius:20px;
+    position: absolute;
+    left: 500px;
+    top: 500px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+#panel3Line{
+    width: 425px;
+    background: black;
+    border: none;
+    height: 3px;
+    position: absolute;
+    left: 500px;
+    top: 540px;
+}
+
+#tooltip-3 {
+    left: 545px;
+    top: 513px;
+}
+
+#panel4{
+    width:420px;
+    height:250px;
+    background:#ffffff;
+    border-radius:20px;
+    position: absolute;
+    left: 970px;
+    top: 500px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+#panel4Line{
+    width: 425px;
+    background: black;
+    border: none;
+    height: 3px;
+    position: absolute;
+    left: 970px;
+    top: 540px;
+}
+
+#energyProgression{
+    transform: scale(0.2);
+    position: relative;
+    cursor: cell;
+    top: 200px;
+    left: 450px;
+}
+
+#enlarge-button{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    cursor: pointer;
+    position: absolute;
+    top: 725px;
+    left: 1165px;
+}
+
+#close-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    cursor: pointer;
+    position: relative;
+    top: -495px;
+    left: -10px;
+}
+
+#modal {
+    cursor: cell;
+    display: none;
+    position: fixed;
+    padding-left: 25px;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.97);
+}
+
+#modal-content {
+    cursor: cell;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 100%;
+    height: 100%;
+}
+
+#tooltip-4 {
+    left: 1025px;
+    top: 513px;
+}
+
+#dropdown-battery {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    cursor: pointer;
+    position: absolute;
+    left: 170px;
+    top: 690px;
+}
+
+#diagram-container {
+    position: absolute;
+    cursor: cell;
+    left: 65px;
+    top: 300px;
+    padding: 20px;
+    transform: scale(1.055);
+}
+
+#tooltip-battery{
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 230px;
+    left: 110px;
+    .tooltip-content{
+        font-size: 20px;
+    }
+}
+
+#reset-button {
+    background-color: #ffffff; /* Green background */
+    color: #000000; /* White text */
+    padding: 10px 20px; /* Add some padding */
+    border-style: solid;
+    border-radius: 5px; /* Add a rounded corner */
+    border-width: 2px;
+    cursor: pointer; /* Change the cursor to a pointer */
+    position: absolute;
+    left: 500px;
+}
+
+#battery{
+    width:400px;
+    height:550px;
+    background:#ffffff;
+    border-radius:20px;
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    border-style: solid;
+    border-width: 5px;
+}
+
