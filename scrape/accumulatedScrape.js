@@ -1,7 +1,5 @@
 const puppeteer = require('puppeteer-extra');
-//const fs = require('fs/promises');
-const fs = require('fs');
-
+const fs = require('fs/promises');
 
 puppeteer.use(require('puppeteer-extra-plugin-user-preferences')({
     userPrefs: {
@@ -68,13 +66,7 @@ async function scrapeData() {
      */
 
     await browser.close();
-    return val;
+    await fs.writeFile('accumulatedScrapedVal.txt', val);
 }
 
-//scrapeData();
-
-scrapeData().then((val) => {
-    const element = document.getElementById('accumulated-output');
-    element.innerHTML = val;
-    console.log("Value changed")
-});
+scrapeData();

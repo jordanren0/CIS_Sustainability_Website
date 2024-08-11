@@ -7,47 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<h1>JavaScript Main</h1>
-<!--
-<div id="output">
-    <h2 id="daily-output"></h2>
-    <h2 id="monthly-output"></h2>
-    <h2 id="accumulated-output"></h2>
-</div>
-<script src="index.js"></script>
--->
-
-
-<!-- <div id="daily-output"></div>
- <script src="index.js" ></script>-->
-<script src="scrape/monthlyScrape.js"></script>
-<script src="scrape/dailyScrape.js"></script>
-
-<!--<script src="scrape/monthlyScrape.js"></script>
-<script src="scrape/accumulatedScrape.js"></script>-->
-
-<p id="daily-output">{{dailyOutput}}</p>
-<p id="monthly-output">{{monthlyOutput}}</p>
-<!--<p id="accumulated-output">{{accumulatedOutput}}</p>-->
-<div id="accumulated-output"></div>
-
-
-<button id="reset-button">Reset</button>
-<script src="reset.js"></script>
-<script>
-    const button = document.getElementById("reset-button");
-    button.addEventListener("click", resetButton);
-</script>
 
 <!-- Clock -->
 <div id="clock-rectangle"></div>
 <div id="clock"></div>
-<script src="clock.js" ></script>
+<script src="display/clock.js" ></script>
 
 <!-- CIS Image -->
-<img src="CIS%20Logo.png" alt="CIS Logo" style="position: absolute; left: -200px; top: -40px; transform: scale(0.5);">
+<img src="images/CIS%20Logo.png" alt="CIS Logo" style="position: absolute; left: -200px; top: -40px; transform: scale(0.5);">
 
 <!-- Panel 1 -->
 <div id="panel1"></div>
@@ -56,6 +24,22 @@
     <span class="tooltip-text">Tooltip 1 text</span>
     <span class="tooltip-content">Daily Energy Output</span>
 </div>
+<b id = "dailyApprox">≈</b>
+<select id="daily-units-dropdown">
+    <option value="lightbulbs-lit">Lightbulbs Lit</option>
+    <option value="macbooks-charged" selected>Macbooks Charged</option>
+    <option value="wind-turbines spun">Wind Turbines Spun</option>
+    <option value="homes-powered">Homes Powered</option>
+    <option value="teslas-charged">Teslas Charged</option>
+    <option value="airplanes-fueled">Airplanes Fueled</option>
+    <option value="power-plants powered">Power Plants Powered</option>
+</select>
+<img id="daily-unit-image" src="images/laptop.png" alt="Daily unit image">
+<div id="daily-value-container"></div>
+
+<!-- <script src="scrape/dailyScrape.js"></script>
+<p id="daily-output">{{dailyOutput}}</p> -->
+
 
 <!-- Panel 2 -->
 <div id="panel2"></div>
@@ -64,6 +48,18 @@
     <span class="tooltip-text">Tooltip 2 text</span>
     <span class="tooltip-content">Monthly Energy Output</span>
 </div>
+<select id="monthly-units-dropdown">
+    <option value="lightbulbs-lit">Lightbulbs Lit</option>
+    <option value="macbooks-charged">Macbooks Charged</option>
+    <option value="wind-turbines spun" selected>Wind Turbines Spun</option>
+    <option value="homes-powered">Homes Powered</option>
+    <option value="teslas-charged">Teslas Charged</option>
+    <option value="airplanes-fueled">Airplanes Fueled</option>
+    <option value="power-plants powered">Power Plants Powered</option>
+</select>
+<b id = "monthlyApprox">≈</b>
+<img id="monthly-unit-image" src="images/wind_turbine.png" alt="Monthly unit image">
+<div id="monthly-value-container"></div>
 
 <!-- Panel 3 -->
 <div id="panel3"></div>
@@ -72,6 +68,21 @@
     <span class="tooltip-text">Tooltip 3 text</span>
     <span class="tooltip-content">Accumulated Energy Output</span>
 </div>
+<select id="accumulated-units-dropdown">
+    <option value="lightbulbs-lit">Lightbulbs Lit</option>
+    <option value="macbooks-charged">Macbooks Charged</option>
+    <option value="wind-turbines spun">Wind Turbines Spun</option>
+    <option value="homes-powered">Homes Powered</option>
+    <option value="teslas-charged" selected>Teslas Charged</option>
+    <option value="airplanes-fueled">Airplanes Fueled</option>
+    <option value="power-plants powered">Power Plants Powered</option>
+</select>
+<b id = "accumulateApprox">≈</b>
+<img id="accumulated-unit-image" src="images/tesla.png" alt="Accumulated unit image">
+<div id="accumulated-value-container"></div>
+
+<script src="display/unitImage.js"></script>
+<script src="display/convertUnits.js"></script>
 
 <!-- Panel 4 -->
 <div id="panel4"></div>
@@ -88,8 +99,7 @@
     <button id="close-button"> Close </button>
 </div>
 <button id="enlarge-button">Enlarge</button>
-<script src="energyProgressionGraph.js"></script>
-
+<script src="display/energyProgressionGraph.js"></script>
 
 <!-- Battery -->
 <div id="battery"></div>
@@ -105,7 +115,7 @@
 <div id="diagram-container">
     <canvas id="diagram-canvas"></canvas>
 </div>
-<script src="batteryDiagram.js"></script>
+<script src="display/batteryDiagram.js"></script>
 <div class="tooltip" id="tooltip-battery">
     <span class="tooltip-text">Tooltip 4 text</span>
     <span class="tooltip-content">Chart displaying clean/unclean <br> energy proportion (%)</span>

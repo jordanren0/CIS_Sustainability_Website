@@ -137,6 +137,54 @@ h1 {
     top: 240px;
 }
 
+#dailyApprox{
+    font-size: 40px;
+    position: absolute;
+    top: 310px;
+    left: 705px;
+}
+
+#daily-units-dropdown{
+    background-color: #ffffff;
+    color: #000000;
+    width: 170px;
+    text-align: center;
+    padding: 10px 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    cursor: pointer;
+    position: absolute;
+    left: 740px;
+    top: 400px;
+}
+
+#daily-unit-image{
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    object-position: center;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 610px;
+    top: 342px;
+}
+
+#daily-value-container{
+    font-size: 30px;
+    font-weight: bold;
+    width: 170px;
+    height: 125px;
+    position: absolute;
+    top: 270px;
+    left: 740px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #tooltip-1 {
     left: 595px;
     top: 213px;
@@ -164,6 +212,54 @@ h1 {
     top: 240px;
 }
 
+#monthlyApprox{
+    font-size: 40px;
+    position: absolute;
+    top: 310px;
+    left: 1175px;
+}
+
+#monthly-units-dropdown{
+    background-color: #ffffff;
+    color: #000000;
+    width: 170px;
+    text-align: center;
+    padding: 10px 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    cursor: pointer;
+    position: absolute;
+    left: 1210px;
+    top: 400px;
+}
+
+#monthly-unit-image{
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    object-position: center;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 1080px;
+    top: 342px;
+}
+
+#monthly-value-container{
+    font-size: 30px;
+    font-weight: bold;
+    width: 170px;
+    height: 125px;
+    position: absolute;
+    top: 270px;
+    left: 1210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #tooltip-2 {
     left: 1045px;
     top: 213px;
@@ -189,6 +285,54 @@ h1 {
     position: absolute;
     left: 500px;
     top: 540px;
+}
+
+#accumulateApprox{
+    font-size: 40px;
+    position: absolute;
+    top: 610px;
+    left: 705px;
+}
+
+#accumulated-units-dropdown{
+    background-color: #ffffff;
+    color: #000000;
+    width: 170px;
+    text-align: center;
+    padding: 10px 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    cursor: pointer;
+    position: absolute;
+    left: 740px;
+    top: 700px;
+}
+
+#accumulated-unit-image{
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    object-position: center;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 610px;
+    top: 642px;
+}
+
+#accumulated-value-container{
+    font-size: 30px;
+    font-weight: bold;
+    width: 170px;
+    height: 125px;
+    position: absolute;
+    top: 570px;
+    left: 740px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #tooltip-3 {
@@ -222,7 +366,7 @@ h1 {
     transform: scale(0.2);
     position: relative;
     cursor: cell;
-    top: 200px;
+    top: 265px;
     left: 450px;
 }
 
@@ -318,18 +462,6 @@ h1 {
     .tooltip-content{
         font-size: 20px;
     }
-}
-
-#reset-button {
-    background-color: #ffffff; /* Green background */
-    color: #000000; /* White text */
-    padding: 10px 20px; /* Add some padding */
-    border-style: solid;
-    border-radius: 5px; /* Add a rounded corner */
-    border-width: 2px;
-    cursor: pointer; /* Change the cursor to a pointer */
-    position: absolute;
-    left: 500px;
 }
 
 #battery{

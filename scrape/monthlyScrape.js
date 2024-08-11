@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer-extra');
 const fs = require('fs/promises');
 
-
 puppeteer.use(require('puppeteer-extra-plugin-user-preferences')({
     userPrefs: {
         safebrowsing: {
@@ -11,8 +10,8 @@ puppeteer.use(require('puppeteer-extra-plugin-user-preferences')({
     }
 }));
 
-async function scrapeData() {
-    const browser = await puppeteer.launch({headless: false});
+async function scrapeDaily() {
+    const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
     await page.setViewport({
         width: 1920,
@@ -22,10 +21,6 @@ async function scrapeData() {
     });
 
     await page.goto('http://energy.cis.edu.hk/pages/diagram/diagram1/Diagram1.html');
-
-//const title = await page.title();
-//const url = await page.url();
-//console.log(title, url);
 
     await page.waitForSelector('#user');
     await page.type('#user', 'cis', {delay: 50});
@@ -55,13 +50,13 @@ async function scrapeData() {
     await page.type('#selectPeriod', 'M', {delay: 50});
 
     await page.keyboard.press('Enter');
-//console.log('Selected Period');
 
     await page.click('#L_generate')
-//console.log('Generated Period');
 
     await page.waitForSelector("#sumTd_1_2")
     const val = await page.$eval('#sumTd_1_2', el => el.textContent);
+
+    /*
     console.log(val);
 
     const filePath = '/Users/jordan_ren/WebstormProjects/CIS_Sustainability_Website/main.html';
@@ -71,7 +66,11 @@ async function scrapeData() {
     await fs.writeFile(filePath, newHtml);
 
     await browser.close();
-}
-//setInterval(scrapeData, 60 * 1000);
 
-scrapeData();
+     */
+
+    await browser.close();
+    await fs.writeFile('monthlyScrapedVal.txt', val);
+}
+
+scrapeDaily();
