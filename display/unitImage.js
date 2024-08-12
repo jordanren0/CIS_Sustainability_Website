@@ -23,8 +23,18 @@ dailyUnitsDropdown.addEventListener('change', (e) => {
 
     const imageUrl = imageMap[selectedValue];
 
-    dailyUnitImage.src = imageUrl;
-    dailyUnitImage.alt = selectedValue;
+    dailyUnitImage.classList.add('fade-out');
+
+    setTimeout(() => {
+        dailyUnitImage.src = imageUrl;
+        dailyUnitImage.alt = selectedValue;
+
+        dailyUnitImage.classList.remove('fade-out');
+        dailyUnitImage.classList.add('fade-in');
+        setTimeout(() => {
+            dailyUnitImage.classList.remove('fade-in');
+        }, 200);
+    }, 200);
 });
 
 monthlyUnitsDropdown.addEventListener('change', (e) => {
@@ -32,8 +42,18 @@ monthlyUnitsDropdown.addEventListener('change', (e) => {
 
     const imageUrl = imageMap[selectedValue];
 
-    monthlyUnitImage.src = imageUrl;
-    monthlyUnitImage.alt = selectedValue;
+    monthlyUnitImage.classList.add('fade-out');
+
+    setTimeout(() => {
+        monthlyUnitImage.src = imageUrl;
+        monthlyUnitImage.alt = selectedValue;
+
+        monthlyUnitImage.classList.remove('fade-out');
+        monthlyUnitImage.classList.add('fade-in');
+        setTimeout(() => {
+            monthlyUnitImage.classList.remove('fade-in');
+        }, 200);
+    }, 200);
 });
 
 accumulatedUnitsDropdown.addEventListener('change', (e) => {
@@ -41,6 +61,16 @@ accumulatedUnitsDropdown.addEventListener('change', (e) => {
 
     const imageUrl = imageMap[selectedValue];
 
-    accumulatedUnitImage.src = imageUrl;
-    accumulatedUnitImage.alt = selectedValue;
+    accumulatedUnitImage.classList.add('fade-out');
+
+    setTimeout(() => {
+        accumulatedUnitImage.src = imageUrl;
+        accumulatedUnitImage.alt = selectedValue;
+
+        accumulatedUnitImage.classList.remove('fade-out');
+        accumulatedUnitImage.classList.add('fade-in');
+        setTimeout(() => {
+            accumulatedUnitImage.classList.remove('fade-in');
+        }, 200);
+    }, 200);
 });

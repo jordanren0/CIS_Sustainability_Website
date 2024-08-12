@@ -57,6 +57,16 @@ h1 {
     border-color: transparent transparent black transparent;
 }
 
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+}
+
 #daily-output {
     font-size: 60px;
     color: #00FFFF;
