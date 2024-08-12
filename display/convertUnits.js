@@ -72,7 +72,7 @@ fetch('scrape/monthlyScrapedVal.txt')
 
         // Add an event listener to the dropdown to update the value when selected
         monthlyDropdown.addEventListener('change', () => {
-            const selectedUnit = dailyDropdown.value;
+            const selectedUnit = monthlyDropdown.value;
             let unitName = selectedUnit.replace('-', ' ');
             if (unitName.includes('tesla')) {
                 unitName = unitName.replace('tesla', 'Tesla');
@@ -111,7 +111,7 @@ fetch('scrape/accumulatedScrapedVal.txt')
 
         // Add an event listener to the dropdown to update the value when selected
         accumulatedDropdown.addEventListener('change', () => {
-            const selectedUnit = dailyDropdown.value;
+            const selectedUnit = accumulatedDropdown.value;
             let unitName = selectedUnit.replace('-', ' ');
             if (unitName.includes('tesla')) {
                 unitName = unitName.replace('tesla', 'Tesla');
