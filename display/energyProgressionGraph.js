@@ -10,7 +10,7 @@ const labels = [
     '2024 Jan - Jun',
     '2024 Jul - Dec'
 ];
-const data = [80.05, 72.72, 66.37, 39.90, 13.61, 39.59];
+const data = [80.05, 72.72, 66.37, 39.90, 13.61, 42.44];
 
 // Create the small graph
 new Chart(graph, {

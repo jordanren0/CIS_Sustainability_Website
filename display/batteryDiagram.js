@@ -21,10 +21,10 @@ Unclean energy % = 100% - Clean Energy %
  */
 
 const energyData = {
-    // Actual PV = 1042.99
-    // PR% = 0.39585
+    // Actual PV = 1249.49
+    // PR% = 0.42435
     // Theoretical Max = 2624.811166
-    "2024 Jul to Dec": { clean: 39.59, unclean: 60.41 },
+    "2024 Jul to Dec": { clean: 42.44, unclean: 47.56 },
 
     // Actual PV = 375.206667
     // PR% = 0.136083
