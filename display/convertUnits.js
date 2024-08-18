@@ -10,6 +10,7 @@ const accumulatedValueContainer = document.getElementById('accumulated-value-con
 
 // Define the conversion factors for each unit
 const conversionFactors = {
+    'kWh': 1,
     'lightbulbs-lit': 100, // 1 kWh = 100 lightbulbs lit (LED Lightbulbs)
     'macbooks-charged': 4, // 1 kWh = 4 MacBooks charged (4 full charges of 2020 Macbook Air)
     'wind-turbines spun': 0.046, // 1 kWh = 0.001 wind turbines spun (21.6 kWh per day)

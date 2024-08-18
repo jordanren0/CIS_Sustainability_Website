@@ -9,6 +9,7 @@ const accumulatedUnitsDropdown = document.getElementById('accumulated-units-drop
 const accumulatedUnitImage = document.getElementById('accumulated-unit-image');
 
 const imageMap = {
+    'kWh': 'images/solar_panel.png',
     'lightbulbs-lit': 'images/lightbulb.png',
     'macbooks-charged': 'images/laptop.png',
     'teslas-charged': 'images/tesla.png',
