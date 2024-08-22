@@ -11,7 +11,7 @@ puppeteer.use(require('puppeteer-extra-plugin-user-preferences')({
 }));
 
 async function scrapeDaily() {
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
     await page.setViewport({
         width: 1920,
@@ -74,7 +74,7 @@ async function scrapeDaily() {
 }
 
 async function scrapeMonthly() {
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
     await page.setViewport({
         width: 1920,
@@ -137,7 +137,7 @@ async function scrapeMonthly() {
 }
 
 async function scrapeAccumulated() {
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
     await page.setViewport({
         width: 1920,
