@@ -374,11 +374,11 @@ h1 {
 }
 
 #energyProgression{
-    transform: scale(0.2);
-    position: relative;
+    transform: scale(0.22);
+    position: absolute;
     cursor: cell;
-    top: 265px;
-    left: 450px;
+    top: 275px;
+    left: 455px;
 }
 
 #enlarge-button{
