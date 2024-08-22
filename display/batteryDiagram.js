@@ -24,7 +24,7 @@ const energyData = {
     // Actual PV = 1249.49
     // PR% = 0.42435
     // Theoretical Max = 2624.811166
-    "2024 Jul to Dec": { clean: 42.44, unclean: 47.56 },
+    "2024 Jul to Dec": { clean: 42.44, unclean: 57.56 },
 
     // Actual PV = 375.206667
     // PR% = 0.136083
