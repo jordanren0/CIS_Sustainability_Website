@@ -407,8 +407,8 @@ h1 {
     border-width: 1px;
     cursor: pointer;
     position: relative;
-    top: -495px;
-    left: -10px;
+    top: -98%;
+    left: -2%;
 }
 
 #modal {
